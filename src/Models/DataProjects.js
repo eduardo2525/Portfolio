@@ -1,6 +1,6 @@
 import Project from './Project'
 
-import Efood from  '../Image/Project/Efood.png'
+import Efood from '../Image/Project/Efood.png'
 import AgendaContato from '../Image/Project/Agenda de contatos.png'
 import Previsao from '../Image/Project/Previsão.png'
 import DisneyPlus from '../Image/Project/disney-plus.png'
@@ -15,7 +15,7 @@ const ProjectData = [
       'API para manipulação de dados',
       'Navegação com React Router Dom',
       'Aplicação de "styled-components" para estilizaçã',
-      'Gerenciamento de estados com Redux Toolkit',
+      'Gerenciamento de estados com Redux Toolkit'
     ],
     Efood,
     'https://github.com/eduardo2525/Efood',
@@ -24,7 +24,8 @@ const ProjectData = [
   new Project(
     2,
     'Agenda de Contatos',
-    ['React',
+    [
+      'React',
       'Gerenciamento de estados com Redux Toolkit',
       'Aplicação de "styled-components" para estilizaçã'
     ],

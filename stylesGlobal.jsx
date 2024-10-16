@@ -6,11 +6,14 @@ export const StylesGlobal = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
   }
 
   body {
     background-color: ${Colors.background};
+  }
+
+  body::-webkit-scrollbar {
+  display: none;
   }
 
   .container {
