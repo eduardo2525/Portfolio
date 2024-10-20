@@ -1,5 +1,7 @@
+import { Breakpoints } from '../../breakpoint'
+import { Colors } from '../../variables'
+
 import styled from 'styled-components'
-import { Colors } from '../../../variables'
 
 export const StyleSection = styled.section`
   height: 90vh;
@@ -39,6 +41,10 @@ export const StyleSection = styled.section`
         background-color: ${Colors.lightBlue};
         color: ${Colors.colorWhite};
       }
+    }
+
+    @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
+      width: 80%;
     }
   }
 `
@@ -80,6 +86,11 @@ export const Information = styled.div`
       }
     }
   }
+
+  @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
+    width: 90%;
+    height: 80%;
+  }
 `
 export const Ability = styled.div`
   margin-top: 20px;
@@ -116,6 +127,11 @@ export const Ability = styled.div`
       }
     }
   }
+
+  @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
+    width: 90%;
+    height: 80%;
+  }
 `
 
 export const Certificate = styled.div`
@@ -137,5 +153,9 @@ export const Certificate = styled.div`
 
   .swiper-pagination-bullet-active {
     background-color: blue;
+  }
+
+  @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
+    width: 95%;
   }
 `

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 
-import { Colors } from '../../../variables'
+import { Colors } from '../../variables'
+import { Breakpoints } from '../../breakpoint'
+
 import styled from 'styled-components'
 
 export const StyleHeader = styled.header`
@@ -14,11 +16,19 @@ export const StyleHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
+      justify-content: space-around;
+    }
   }
 
   .__title {
     font-size: 64px;
     color: ${Colors.prymary};
+
+    @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
+      font-size: 48px;
+    }
   }
 `
 

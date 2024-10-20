@@ -31,7 +31,7 @@ import SassCertificate from '../../Image/Certificate/Certificado Sass.jpg'
 import TypescriptCertificate from '../../Image/Certificate/Certificado TypeScript.jpg'
 
 import { StyleSection, Information, Ability, Certificate } from './styles'
-import { Colors } from '../../../variables'
+import { Colors } from '../../variables'
 
 const Skills = () => {
   const [tabsBtn, steTabsBtn] = useState('informacao-pessoal')

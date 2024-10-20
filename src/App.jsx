@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import Rotas from './routes'
 
-import { StylesGlobal } from '../stylesGlobal'
+import { StylesGlobal } from '../src/stylesGlobal'
 import AOS from 'aos'
 
 function App() {

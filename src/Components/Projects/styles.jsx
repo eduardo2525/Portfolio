@@ -1,7 +1,8 @@
 import BackgroundCard from '../../Image/Project/background.jpg'
+import { Colors } from '../../variables'
+import { Breakpoints } from '../../breakpoint'
 
 import styled from 'styled-components'
-import { Colors } from '../../../variables'
 
 export const StyleProject = styled.section`
   height: 90vh;
@@ -151,6 +152,15 @@ export const StyleProject = styled.section`
           }
         }
       }
+
+      @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
+        width: 90%;
+      }
+    }
+
+    @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 `

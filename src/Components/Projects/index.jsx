@@ -2,6 +2,7 @@ import ProjectData from '../../Models/DataProjects'
 import { useState } from 'react'
 
 import { StyleProject } from './styles'
+
 const Projects = () => {
   const [mouse, setMouse] = useState(null)
 

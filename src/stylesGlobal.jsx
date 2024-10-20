@@ -13,7 +13,7 @@ export const StylesGlobal = createGlobalStyle`
   }
 
   body::-webkit-scrollbar {
-  display: none;
+    display: none;
   }
 
   .container {

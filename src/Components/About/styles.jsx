@@ -1,5 +1,7 @@
+import { Colors } from '../../variables'
+import { Breakpoints } from '../../breakpoint'
+
 import styled from 'styled-components'
-import { Colors } from '../../../variables'
 
 export const StyleAbout = styled.section`
   height: 90vh;
@@ -8,13 +10,23 @@ export const StyleAbout = styled.section`
   align-items: center;
 
   .__photograph {
-    width: 600px;
-    height: 600px;
+    max-width: 600px;
+    max-height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
 
     &__img {
+      width: 100%;
+      height: 100%;
+
+      @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
       width: 100%;
       height: 100%;
     }
@@ -126,6 +138,22 @@ export const StyleAbout = styled.section`
           }
         }
       }
+      @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
+        margin: 10px auto;
+      }
     }
+
+    @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
+      height: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 `
