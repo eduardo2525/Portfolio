@@ -20,6 +20,10 @@ export const StyleHeader = styled.header`
     @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
       justify-content: space-around;
     }
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      flex-direction: column;
+    }
   }
 
   .__title {
@@ -29,6 +33,15 @@ export const StyleHeader = styled.header`
     @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
       font-size: 48px;
     }
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    width: 100%;
+    height: 100%;
   }
 `
 
@@ -45,6 +58,10 @@ export const StyleNav = styled.nav`
       align-items: center;
       height: 40px;
       padding: 10px;
+    }
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      gap: 10px;
     }
   }
 `
@@ -64,5 +81,9 @@ export const StyleLink = styled(Link)`
     color: ${Colors.colorWhite};
     background-color: ${Colors.secundary};
     border-radius: 15px;
+  }
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    font-size: 24px;
   }
 `

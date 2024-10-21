@@ -162,5 +162,10 @@ export const StyleProject = styled.section`
       width: 100%;
       grid-template-columns: repeat(2, 1fr);
     }
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
   }
 `

@@ -136,16 +136,37 @@ export const StyleAbout = styled.section`
             top: 0;
             border-radius: 10px;
           }
+
+          @media (max-width: ${Breakpoints.mobile}) {
+            padding: 10px 15px;
+          }
+        }
+
+        @media (max-width: ${Breakpoints.mobile}) {
+          padding: 10px 15px;
         }
       }
+
       @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
         margin: 10px auto;
+      }
+
+      @media (max-width: ${Breakpoints.mobile}) {
+        width: 100%;
+        height: 50%;
+        margin-bottom: 20px;
       }
     }
 
     @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
       height: 100%;
       margin-bottom: 10px;
+    }
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      width: 95%;
+      height: 100%;
+      margin-bottom: 20px;
     }
   }
 
@@ -155,5 +176,10 @@ export const StyleAbout = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    height: 100%;
+    flex-direction: column;
   }
 `

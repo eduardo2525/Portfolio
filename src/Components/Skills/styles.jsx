@@ -41,11 +41,26 @@ export const StyleSection = styled.section`
         background-color: ${Colors.lightBlue};
         color: ${Colors.colorWhite};
       }
+
+      @media (max-width: ${Breakpoints.mobile}) {
+        padding: 8px;
+        font-size: 14px;
+      }
     }
 
     @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
       width: 80%;
     }
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      width: 95%;
+    }
+  }
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
   }
 `
 
@@ -69,6 +84,10 @@ export const Information = styled.div`
         color: ${Colors.colorWhite};
         font-size: 24px;
         margin-left: 8px;
+
+        @media (max-width: ${Breakpoints.mobile}) {
+          font-size: 22px;
+        }
       }
     }
 
@@ -79,17 +98,32 @@ export const Information = styled.div`
         display: inline-block;
         border-bottom: 1px solid ${Colors.lightBlue};
         margin-left: 8px;
+
+        @media (max-width: ${Breakpoints.mobile}) {
+          font-size: 22px;
+        }
       }
 
       span {
         color: ${Colors.colorWhite};
       }
     }
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      width: 100%;
+      padding: 10px;
+      grid-template-columns: 1fr;
+    }
   }
 
   @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
     width: 90%;
     height: 80%;
+  }
+
+  @media screen {
+    width: 100%;
+    height: 100%;
   }
 `
 export const Ability = styled.div`
@@ -126,11 +160,20 @@ export const Ability = styled.div`
         }
       }
     }
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
     width: 90%;
     height: 80%;
+  }
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    width: 100%;
+    height: 100%;
   }
 `
 
@@ -144,11 +187,49 @@ export const Certificate = styled.div`
     width: 100%;
     height: 600px;
     padding: 0px 10px;
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      width: 100%;
+      height: 300px;
+    }
   }
 
   .swiper-pagination-bullet {
     width: 16px;
     height: 16px;
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    .swiper-button-next {
+      &::after {
+        content: 'next';
+        color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        font-size: 32px;
+      }
+    }
+
+    .swiper-button-prev {
+      &::after {
+        content: 'prev';
+        color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        font-size: 32px;
+      }
+    }
   }
 
   .swiper-pagination-bullet-active {
@@ -157,5 +238,9 @@ export const Certificate = styled.div`
 
   @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
     width: 95%;
+  }
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    width: 100%;
   }
 `

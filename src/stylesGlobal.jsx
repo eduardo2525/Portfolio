@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import { Colors } from './variables'
+import { Breakpoints } from './breakpoint'
 
 export const StylesGlobal = createGlobalStyle`
   * {
@@ -30,6 +31,10 @@ export const StylesGlobal = createGlobalStyle`
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      font-size: 24px;
+    }
   }
 
   .secundary__title {
@@ -42,6 +47,11 @@ export const StylesGlobal = createGlobalStyle`
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      font-size: 22px;
+      width: 90%;
+    }
   }
 
   .paragraph {
@@ -50,6 +60,11 @@ export const StylesGlobal = createGlobalStyle`
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: italic;
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      font-size: 16px;
+      padding: 20px;
+    }
   }
 
   .title__gray {
@@ -60,6 +75,10 @@ export const StylesGlobal = createGlobalStyle`
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: oblique;
+
+    @media (max-width: ${Breakpoints.mobile}) {
+      font-size: 24px;
+    }
   }
 
   .paragraph__project {
