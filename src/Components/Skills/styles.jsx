@@ -46,6 +46,12 @@ export const StyleSection = styled.section`
         padding: 8px;
         font-size: 14px;
       }
+
+      @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+        span {
+          display: none;
+        }
+      }
     }
 
     @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
@@ -61,6 +67,10 @@ export const StyleSection = styled.section`
     width: 100%;
     height: 100%;
     margin-top: 10px;
+  }
+
+  @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
+    height: 100%;
   }
 `
 
@@ -88,6 +98,10 @@ export const Information = styled.div`
         @media (max-width: ${Breakpoints.mobile}) {
           font-size: 22px;
         }
+
+        @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+          font-size: 20px;
+        }
       }
     }
 
@@ -101,6 +115,10 @@ export const Information = styled.div`
 
         @media (max-width: ${Breakpoints.mobile}) {
           font-size: 22px;
+        }
+
+        @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+          font-size: 20px;
         }
       }
 
@@ -119,9 +137,13 @@ export const Information = styled.div`
   @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
     width: 90%;
     height: 80%;
+
+    > div {
+      height: 400px;
+    }
   }
 
-  @media screen {
+  @media (max-width: ${Breakpoints.mobile}) {
     width: 100%;
     height: 100%;
   }
@@ -158,6 +180,11 @@ export const Ability = styled.div`
           transform: scale(1.2);
           transition: 0.7s ease;
         }
+
+        @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+          width: 80px;
+          height: 80px;
+        }
       }
     }
 
@@ -191,6 +218,11 @@ export const Certificate = styled.div`
     @media (max-width: ${Breakpoints.mobile}) {
       width: 100%;
       height: 300px;
+    }
+
+    @media (max-width: ${Breakpoints.mobile}) and (orientation: landscape) {
+      width: 100%;
+      height: 350px;
     }
   }
 

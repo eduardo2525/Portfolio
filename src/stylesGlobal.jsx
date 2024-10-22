@@ -35,6 +35,10 @@ export const StylesGlobal = createGlobalStyle`
     @media (max-width: ${Breakpoints.mobile}) {
       font-size: 24px;
     }
+
+    @media (min-width: ${Breakpoints.notebook}) and (max-width: ${Breakpoints.desktop}) {
+      font-size: 40px;
+    }
   }
 
   .secundary__title {

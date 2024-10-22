@@ -153,9 +153,21 @@ export const StyleProject = styled.section`
         }
       }
 
+      @media (min-width: ${Breakpoints.notebook}) and (max-width: ${Breakpoints.desktop}) {
+        width: 80%;
+      }
+
       @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
         width: 90%;
       }
+
+      @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+        width: 95%;
+      }
+    }
+
+    @media (min-width: ${Breakpoints.notebook}) and (max-width: ${Breakpoints.desktop}) {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {

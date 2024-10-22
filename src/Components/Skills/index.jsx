@@ -59,7 +59,7 @@ const Skills = () => {
           className={`tabs__btn ${tabsBtn === 'informacao-pessoal' ? 'tabs__btn--cliked' : ''}`}
           onClick={() => tabs('informacao-pessoal')}
         >
-          Informação pessoal
+          Informação <span>pessoal</span>
         </button>
         <button
           className={`tabs__btn ${tabsBtn === 'habilidades' ? 'tabs__btn--cliked' : ''}`}

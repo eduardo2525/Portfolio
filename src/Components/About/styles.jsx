@@ -26,6 +26,11 @@ export const StyleAbout = styled.section`
       }
     }
 
+    @media (min-width: ${Breakpoints.notebook}) and (max-width: ${Breakpoints.desktop}) {
+      max-width: 400px;
+      max-height: 400px;
+    }
+
     @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
       width: 100%;
       height: 100%;
@@ -140,10 +145,18 @@ export const StyleAbout = styled.section`
           @media (max-width: ${Breakpoints.mobile}) {
             padding: 10px 15px;
           }
+
+          @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+            padding: 8px;
+          }
         }
 
         @media (max-width: ${Breakpoints.mobile}) {
           padding: 10px 15px;
+        }
+
+        @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+          padding: 8px;
         }
       }
 
@@ -156,6 +169,10 @@ export const StyleAbout = styled.section`
         height: 50%;
         margin-bottom: 20px;
       }
+    }
+
+    @media (min-width: ${Breakpoints.notebook}) and (max-width: ${Breakpoints.desktop}) {
+      max-width: 700px;
     }
 
     @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
