@@ -1,10 +1,36 @@
 import ProjectData from '../../Models/DataProjects'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { StyleProject } from './styles'
 
 const Projects = () => {
   const [mouse, setMouse] = useState(null)
+  const [mobileActive, setMobileActive] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobileWidth = window.innerWidth
+
+      if (mobileWidth <= 768) {
+        setMobileActive(true)
+
+        const timer = setTimeout(() => {
+          setMobileActive(false)
+        }, 5000);
+
+        return () => clearTimeout(timer)
+      } else {
+        setMobileActive(false)
+      }
+    };
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    };
+  }, []);
 
   return (
     <StyleProject
@@ -13,6 +39,16 @@ const Projects = () => {
       data-aos-easing="ease-out-cubic"
       data-aos-duration="2000"
     >
+      {mobileActive && (
+        <div className="alert">
+          <div className="alert__header">
+            Atenção
+          </div>
+          <div className="alert__body">
+            <p>Para acessar os links do (Github e Deploy) dos projetos, clique em cada um dos cards.</p>
+          </div>
+      </div>
+      )}
       <h2 className="title__gray">Meus Projetos</h2>
       <div className="project__container">
         {ProjectData.map((item, index) => (

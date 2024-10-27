@@ -180,4 +180,29 @@ export const StyleProject = styled.section`
       grid-template-columns: 1fr;
     }
   }
+
+  .alert {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 0%.25rem;
+    padding: 1px;
+    width: 90%;
+    margin: 1rem auto;
+
+    font-family: 'Roboto', sans-serif;
+
+    &__header {
+      background-color: #dc3545;
+      font-size: 24px;
+      color: white;
+      font-weight: bold;
+      padding: 0.5rem;
+      border-radius: 0.25rem 0.25rem 0 0;
+    }
+
+    &__body {
+      color: #721c24;
+      padding: 0.5rem;
+    }
+  }
 `
