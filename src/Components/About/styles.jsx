@@ -146,7 +146,8 @@ export const StyleAbout = styled.section`
             padding: 10px 15px;
           }
 
-          @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+          @media (min-width: ${Breakpoints.mobileSmall
+              .min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
             padding: 8px;
           }
         }
@@ -155,7 +156,8 @@ export const StyleAbout = styled.section`
           padding: 10px 15px;
         }
 
-        @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+        @media (min-width: ${Breakpoints.mobileSmall
+            .min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
           padding: 8px;
         }
       }

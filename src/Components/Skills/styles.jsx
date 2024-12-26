@@ -47,7 +47,8 @@ export const StyleSection = styled.section`
         font-size: 14px;
       }
 
-      @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+      @media (min-width: ${Breakpoints.mobileSmall
+          .min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
         span {
           display: none;
         }
@@ -99,7 +100,8 @@ export const Information = styled.div`
           font-size: 22px;
         }
 
-        @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+        @media (min-width: ${Breakpoints.mobileSmall
+            .min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
           font-size: 20px;
         }
       }
@@ -117,7 +119,8 @@ export const Information = styled.div`
           font-size: 22px;
         }
 
-        @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+        @media (min-width: ${Breakpoints.mobileSmall
+            .min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
           font-size: 20px;
         }
       }
@@ -181,7 +184,8 @@ export const Ability = styled.div`
           transition: 0.7s ease;
         }
 
-        @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+        @media (min-width: ${Breakpoints.mobileSmall
+            .min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
           width: 80px;
           height: 80px;
         }

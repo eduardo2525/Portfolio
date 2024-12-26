@@ -5,7 +5,7 @@ import { Breakpoints } from '../../breakpoint'
 import styled from 'styled-components'
 
 export const StyleProject = styled.section`
-  height: 90vh;
+  height: 100%;
 
   h2 {
     margin-bottom: 10px;
@@ -15,13 +15,13 @@ export const StyleProject = styled.section`
     width: 90%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     grid-gap: 20px;
 
     &__my {
-      width: 350px;
-      height: 546px;
+      width: 100%;
+      height: 100%;
       background: ${Colors.backgroundCard};
       border-radius: 30px;
       margin: 0 auto;
@@ -29,13 +29,14 @@ export const StyleProject = styled.section`
       &__background {
         position: relative;
         width: 100%;
-        height: 50%;
+        height: 300px;
         background-image: url(${BackgroundCard});
         background-size: 50%;
         border-radius: 30px 30px 0 0;
 
         img {
           width: 80%;
+          height: 80%;
           border-radius: 15px;
           position: relative;
           top: 50%;
@@ -43,6 +44,14 @@ export const StyleProject = styled.section`
           transform: translate(-50%, -40%);
           object-fit: cover;
           z-index: 1;
+
+          @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+            width: 90%;
+          }
+
+          @media (max-width: ${Breakpoints.mobile}) {
+            width: 90%;
+          }
         }
 
         &__links {
@@ -154,7 +163,7 @@ export const StyleProject = styled.section`
       }
 
       @media (min-width: ${Breakpoints.notebook}) and (max-width: ${Breakpoints.desktop}) {
-        width: 80%;
+        width: 90%;
       }
 
       @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
@@ -172,11 +181,11 @@ export const StyleProject = styled.section`
 
     @media (min-width: ${Breakpoints.tablet}) and (max-width: ${Breakpoints.notebook}) {
       width: 100%;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
 
     @media (max-width: ${Breakpoints.mobile}) {
-      width: 100%;
+      width: 95%;
       grid-template-columns: 1fr;
     }
   }

@@ -16,21 +16,21 @@ const Projects = () => {
 
         const timer = setTimeout(() => {
           setMobileActive(false)
-        }, 5000);
+        }, 5000)
 
         return () => clearTimeout(timer)
       } else {
         setMobileActive(false)
       }
-    };
+    }
 
     handleResize()
     window.addEventListener('resize', handleResize)
 
     return () => {
       window.removeEventListener('resize', handleResize)
-    };
-  }, []);
+    }
+  }, [])
 
   return (
     <StyleProject
@@ -41,13 +41,14 @@ const Projects = () => {
     >
       {mobileActive && (
         <div className="alert">
-          <div className="alert__header">
-            Atenção
-          </div>
+          <div className="alert__header">Atenção</div>
           <div className="alert__body">
-            <p>Para acessar os links do (Github e Deploy) dos projetos, clique em cada um dos cards.</p>
+            <p>
+              Para acessar os links do (Github e Deploy) dos projetos, clique em
+              cada um dos cards.
+            </p>
           </div>
-      </div>
+        </div>
       )}
       <h2 className="title__gray">Meus Projetos</h2>
       <div className="project__container">
@@ -108,11 +109,11 @@ const Projects = () => {
             </div>
             <div className="project__container__my__description">
               <h3 className="paragraph__project">{item.title}</h3>
-              <p>Tecnologias utilizadas</p>
+              <p>Sobre o Projeto</p>
+              <p>{item.description}</p>
+              <span className="paragraph__project">Tecnologias utilizadas</span>
               <ul>
-                {item.technologies.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
+                <li>{item.technologies}</li>
               </ul>
             </div>
           </div>

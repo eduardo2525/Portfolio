@@ -87,7 +87,8 @@ export const StyleLink = styled(Link)`
     font-size: 24px;
   }
 
-  @media (min-width: ${Breakpoints.mobileSmall.min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
+  @media (min-width: ${Breakpoints.mobileSmall
+      .min}) and (max-width: ${Breakpoints.mobileSmall.max}) {
     font-size: 20px;
   }
 `
