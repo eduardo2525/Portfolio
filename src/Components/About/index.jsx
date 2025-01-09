@@ -1,6 +1,6 @@
 import { StyleAbout } from './styles'
 import Eduardo from '../../Image/Eduardo.png'
-import CV from '../../../public/Eduardo CV.pdf'
+import CV from '../../../public/Eduardo-CV.pdf'
 
 const About = () => {
   return (
